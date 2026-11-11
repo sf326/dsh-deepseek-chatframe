@@ -1,6 +1,6 @@
 {
   "name": "dsh-deepseek-chatframe",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "DeepSeek Harness 聊天气泡皮肤，能够对DeepSeek输出内容以及自己的内容进行聊天气泡替换，进行一系列的美化ovo",
   "keywords": [
     "dsh",

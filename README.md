@@ -6,7 +6,7 @@
 [![license](https://img.shields.io/badge/license-BSD--3--Clause-green.svg)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-DSH%20Desktop-lightgrey.svg)](#兼容性与已知限制)
 
-- 版本：`1.0.3`（构建 `1.0.3+queuefix.1`）
+- 版本：`1.0.4`（构建 `1.0.4`）
 - 运行时依赖：**零**（Host 半纯 Node，无需构建）
 - 素材：插件不内置气泡，导入自己的气泡包即可
 
