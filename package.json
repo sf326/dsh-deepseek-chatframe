@@ -1,0 +1,52 @@
+{
+  "name": "dsh-deepseek-chatframe",
+  "version": "1.0.3",
+  "description": "DeepSeek Harness 聊天气泡皮肤，能够对DeepSeek输出内容以及自己的内容进行聊天气泡替换，进行一系列的美化ovo",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek-harness-plugin",
+    "chat-bubble",
+    "bubble",
+    "chatframe"
+  ],
+  "license": "BSD-3-Clause",
+  "author": "sf_326",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md",
+    "image"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.2 <0.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sf326/dsh-deepseek-chatframe.git"
+  },
+  "homepage": "https://github.com/sf326/dsh-deepseek-chatframe#readme",
+  "bugs": {
+    "url": "https://github.com/sf326/dsh-deepseek-chatframe/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web"
+    }
+  }
+}
