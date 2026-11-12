@@ -1,14 +1,16 @@
 # dsh-deepseek-chatframe
 
+---
+
 给 DeepSeek Harness（DSH）用的聊天气泡皮肤插件：解析 `config.json` + `bubbleframe/*.png` 气泡包，在 DSH 设置页新增「DeepSeek聊天框」，把消息气泡替换成可逐帧动画的气泡框，进行一系列的美化ovo
 
-[![version](https://img.shields.io/badge/version-1.0.0-blue.svg)](package.json)
-[![license](https://img.shields.io/badge/license-BSD--3--Clause-green.svg)](LICENSE)
-[![platform](https://img.shields.io/badge/platform-DSH%20Desktop-lightgrey.svg)](#兼容性与已知限制)
+[![version](https://img.shields.io/badge/version-1.0.5-blue.svg?style=for-the-badge)](package.json)
+[![license](https://img.shields.io/badge/license-BSD--3--Clause-green.svg?style=for-the-badge)](LICENSE)
+[![platform](https://img.shields.io/badge/platform-DSH%20Desktop-lightgrey.svg?style=for-the-badge)](#致谢与许可)
 
-- 版本：`1.0.4`（构建 `1.0.4`）
+### 另外 本插件本身不带任何装扮 需要自行获取喵~
+
 - 运行时依赖：**零**（Host 半纯 Node，无需构建）
-- 素材：插件不内置气泡，导入自己的气泡包即可
 
 ## 预览
 
@@ -37,9 +39,7 @@ DSH 默认的消息气泡是纯色圆角。本插件把它替换成**气泡包�
 核心思路：
 
 - 不写死像素：内洞、边框、文字内缩、缩放全部由**当前气泡图案实测** + 元素字号推导，换任何素材都自适应；
-- 只使用 DSH 公开的语义 DOM 锚点与状态，不修改官方 React 组件；
 - Host 半侧只负责状态、素材扫描与帧下发，浏览器半侧负责绘制与动画；
-- 关闭插件时还原官方界面，不残留样式与 DOM。
 
 ## 功能
 
@@ -94,18 +94,16 @@ DSH 默认的消息气泡是纯色圆角。本插件把它替换成**气泡包�
 - DSH `0.2.0-rc.2`（本插件按该版本的 slot 契约编写）
 - **无需构建**：`client.js` 就是发布产物，手写、可读，便于静态审计
 
-### 方式一：插件面板（推荐）
+### 方式一：插件面板
 
 1. 下载 / 克隆本目录到本机任意位置（安装后不要移动或删除）；
 2. 打开 DSH Desktop → 设置 → 插件 → 添加插件；
-3. 填入本目录的完整路径（不是 `.zip`，也不是 `package.json`）；
-4. 勾选信任确认 → 安装 → 启用；
-5. 完全退出并重开 DSH Desktop（只关窗口不够）。
+3. 输入本插件的包名 `dsh-deepseek-chatframe` 或通过git安装 `github:sf326/dsh-deepseek-chatframe`
 
-### 方式二：命令行（非 desktop profile）
+### 方式二：命令行
 
 ```powershell
-dsh plugin --profile web add link:"<本目录的绝对路径>"
+dsh plugin --profile web add dsh-deepseek-chatframe
 dsh --profile web --dump-config
 ```
 
@@ -115,7 +113,7 @@ dsh --profile web --dump-config
 
 重开 DSH 后：
 
-1. 设置 → **DeepSeek聊天框** → 顶部应显示 `版本 v1.0.0 · 引擎 1.0.0+clean.1`；
+1. 设置 → **DeepSeek聊天框** → 顶部应显示最新版本；
 2. 选择「我发的消息 / DeepSeek 消息」各一个气泡并保存，消息应立刻换肤；
 3. 没有气泡素材时，先到设置页导入气泡包。
 
