@@ -2,7 +2,7 @@
 
 给 DeepSeek Harness（DSH）用的聊天气泡皮肤插件：解析 `config.json` + `bubbleframe/*.png` 气泡包，在 DSH 设置页新增「DeepSeek聊天框」，把消息气泡替换成可逐帧动画的气泡框，进行一系列的美化ovo
 
-[![version](https://img.shields.io/badge/version-1.0.5-blue.svg?style=for-the-badge)](package.json)
+[![version](https://img.shields.io/npm/v/dsh-deepseek-chatframe?style=for-the-badge&label=version)](package.json)
 [![license](https://img.shields.io/badge/license-BSD--3--Clause-green.svg?style=for-the-badge)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-DSH%20Desktop-lightgrey.svg?style=for-the-badge)](#致谢与许可)
 
@@ -54,6 +54,18 @@ DSH 默认的消息气泡是纯色圆角。本插件把它替换成**气泡包�
 
 - 内置「iMessage输入框」预设；
 - 也可选择任意导入气泡作为输入框背景，不覆盖文字、光标与按钮。
+
+### 任务表单气泡
+
+- 输入框上方的「任务」面板（`1 进行中 · 2 待处理`）可单独套气泡；
+- 开关与气泡选择都独立于输入框，只改背景与内边距，不影响任务文字与折叠按钮；
+- 多帧气泡同样循环播放，尺寸变化自动重算内洞。
+
+### 命令授权气泡
+
+- 输入框上方的「等待审批」卡片可单独套气泡；
+- 与任务表单、输入框各自独立配置；
+- 不影响审批按钮（允许 / 拒绝）与命令内容显示。
 
 ### 发送时动画（独立模块）
 
@@ -130,6 +142,8 @@ dsh --profile web --dump-config
 启用聊天气泡皮肤
   ├─ 性能模式
   ├─ 替换原来的输入框为气泡
+  ├─ 替换任务表单为气泡
+  ├─ 替换命令授权界面为气泡
   ├─ 无论状态是否空闲 始终应用气泡
   ├─ 预加载气泡
   ├─ 超极致模式
@@ -166,8 +180,7 @@ node --check lib/client.js
 
 - 浏览器半侧是手写的 `window.__ModuleLoader__.load({ ... })` bundle，无构建步骤；
 - Host 半侧是 Node ESM，路由前缀 `/dsh-deepseek-chatframe`；
-- 修改 Host 后必须完全退出 DSH（托盘右键退出）再启动；
-- 离线断言套件在开发仓库的其他目录维护，本发布包不含 `test/`。
+- 修改 Host 后必须完全退出 DSH（托盘右键退出）再启动。
 
 ## 项目结构
 
