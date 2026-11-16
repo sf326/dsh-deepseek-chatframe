@@ -2,7 +2,7 @@
 
 给 DeepSeek Harness（DSH）用的聊天气泡皮肤插件：解析 `config.json` + `bubbleframe/*.png` 气泡包，在 DSH 设置页新增「DeepSeek聊天框」，把消息气泡替换成可逐帧动画的气泡框，进行一系列的美化ovo
 
-[![version](https://img.shields.io/npm/v/dsh-deepseek-chatframe?style=for-the-badge&label=version)](package.json)
+[![version](https://img.shields.io/npm/v/dsh-deepseek-chatframe?style=for-the-badge&label=version)](https://www.npmjs.com/package/dsh-deepseek-chatframe)
 [![license](https://img.shields.io/badge/license-BSD--3--Clause-green.svg?style=for-the-badge)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-DSH%20Desktop-lightgrey.svg?style=for-the-badge)](#致谢与许可)
 
